@@ -1,0 +1,7 @@
+<h1>Projects</h1>
+<a href="{% url 'create_project' %}">Create New Project</a>
+<ul>
+    {% for project in projects %}
+        <li>{{ project.name }} - {{ project.timeline }} - ${{ project.budget }}</li>
+    {% endfor %}
+</ul>
